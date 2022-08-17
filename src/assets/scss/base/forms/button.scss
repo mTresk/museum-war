@@ -1,0 +1,42 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	font-weight: 600;
+	font-size: 50px;
+	line-height: 100%;
+	color: $darkBlueColor;
+	background-color: $whiteColor;
+	padding: rem(0) rem(70) rem(7);
+	border-radius: rem(50);
+	transition: color 0.4s ease-in-out;
+
+	&:active,
+	&:hover {
+		color: $blueColor;
+
+		svg {
+			path {
+				fill: $blueColor;
+			}
+		}
+	}
+
+	svg {
+		margin-left: rem(20);
+		margin-top: rem(10);
+		path {
+			fill: $darkBlueColor;
+			transition: fill 0.4s ease-in-out;
+		}
+	}
+
+	&_left {
+		svg {
+			margin-right: rem(20);
+			margin-left: 0;
+		}
+	}
+}
